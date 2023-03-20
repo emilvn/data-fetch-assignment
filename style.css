@@ -37,13 +37,16 @@ form {
     text-align: center;
 }
 
-button {
+form button {
     background-color: darkgreen;
     border: none;
     height: 2em;
     width: 10em;
     color: white;
     cursor: pointer;
+    position: absolute;
+    top: 1%;
+    right: 1%;
 }
 
 main{
