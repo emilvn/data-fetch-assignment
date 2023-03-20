@@ -9,7 +9,7 @@ async function main() {
 }
 
 async function loadJSON() {
-    const response = await fetch("data/data.json");
+    const response = await fetch("data/tpb.json");
     const data = await response.json();
     return data;
 }
@@ -19,10 +19,11 @@ function showCharacters(data) {
         const myHTML = /*html*/`
         <article>
             <img src=${obj["image"]}>
-            <h2>Name: ${obj["name"]}</h2>
+            <h2>${obj["name"]}</h2>
             <p>Age: ${getCurrentAge(obj["birthdate"])}</p>
             <p>Gender: ${capitalize(obj["gender"])}</p>
-            <p>Eye Colour: ${capitalize(obj["eyecolour"])}</p>
+            <p>Favorite food/drink: ${capitalize(obj["favorite"])}</p>
+            <p>Role: ${capitalize(obj["role"])}</p>
         </article>
     `
     characterContainer.insertAdjacentHTML("beforeend", myHTML);

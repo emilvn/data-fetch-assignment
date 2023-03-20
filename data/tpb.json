@@ -1,0 +1,41 @@
+[{
+    "image": "data/images/julian.jpg",
+    "name": "Julian",
+    "birthdate": "17-05-1968",
+    "gender": "male",
+    "favorite": "rum",
+    "role":"brains"
+},
+{
+    "image": "data/images/ricky.jpg",
+    "name": "Ricky",
+    "birthdate": "20-03-1971",
+    "gender": "male",
+    "favorite": "pepperoni",
+    "role" : "hash specialist"
+},
+{
+    "image": "data/images/bubbles.jpg",
+    "name": "Bubbles",
+    "birthdate": "27-08-1972",
+    "gender": "male",
+    "favorite": "bologna",
+    "role" : "shopping cart specialist"
+},
+{
+    "image": "data/images/lahey.jpg",
+    "name": "Jim Lahey",
+    "birthdate": "12-04-1946",
+    "gender": "male",
+    "favorite": "liquor",
+    "role": "drunken maniac"
+},
+{
+    "image": "data/images/randy.jpg",
+    "name": "Randy",
+    "birthdate": "04-03-1969",
+    "gender": "male",
+    "favorite": "cheeseburgers",
+    "role":"Laheys right hand man/lover"
+}
+]
