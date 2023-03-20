@@ -1,0 +1,29 @@
+[{
+    "image": "data/images/Harry_Potter_character_poster.jpg",
+    "name": "Emil",
+    "birthdate": "13-10-1996",
+    "gender": "male",
+    "eyecolour": "blue"
+},
+{
+    "image": "data/images/Harry_Potter_character_poster.jpg",
+    "name": "Lisa",
+    "birthdate": "04-05-2000",
+    "gender": "female",
+    "eyecolour": "blue"
+},
+{
+    "image": "data/images/Harry_Potter_character_poster.jpg",
+    "name": "Louise",
+    "birthdate": "25-04-1996",
+    "gender": "female",
+    "eyecolour": "green"
+},
+{
+    "image": "data/images/Harry_Potter_character_poster.jpg",
+    "name": "Asbjørn",
+    "birthdate": "24-01-1996",
+    "gender": "female",
+    "eyecolour": "green"
+}
+]
