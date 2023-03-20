@@ -18,14 +18,15 @@ async function fetchData() {
 function showCharacters(data) {
     for (const obj of data) {
         const myHTML = /*html*/`
-        <article>
-            <img src=${obj["image"]}>
-            <h2>${obj["name"]}</h2>
-            <p>${capitalize(obj["role"])}</p>
-        </article>
+        <tr>
+            <td><img src=${obj["image"]}></td>
+            <td>${obj["name"]}</td>
+            <td>${capitalize(obj["role"])}</td>
+            <td>${obj["quote"]}</td>
+        </tr>
     `;
-        characterContainer.insertAdjacentHTML("beforeend", myHTML);
-        characterContainer.querySelector("article:last-child").addEventListener("click", showDialog);
+        characterContainer.querySelector("tbody").insertAdjacentHTML("beforeend", myHTML);
+        characterContainer.querySelector("tbody tr:last-child").addEventListener("click", showDialog);
     } 
 }
 /* =========== Fortmat date correctly for Date object =========== */
@@ -39,8 +40,8 @@ function showDialog() {
     showDialogCharacter(this);
     document.querySelector("#character-dialog").showModal();
 }
-async function showDialogCharacter(article) {
-    const selectedCharacterName = article.querySelector("h2").textContent;
+async function showDialogCharacter(tr) {
+    const selectedCharacterName = tr.querySelector("td:nth-child(2)").textContent;
     const characterObj = await findCharacter(selectedCharacterName);
     const myHTML = /*html*/`
             <figure>

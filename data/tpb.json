@@ -7,7 +7,7 @@
     "role":"mastermind",
     "passtime": "drinking rum",
     "sport" : "lifting weights",
-    "quote": "You’re prostituting yourself out for cheeseburgers again, aren’t you?"
+    "quote": "\"You’re prostituting yourself out for cheeseburgers again, aren’t you?\""
 },
 {
     "image": "data/images/ricky.jpg",
@@ -18,7 +18,7 @@
     "role" : "hash expert",
     "passtime": "getting drunk and high",
     "sport": "hockey",
-    "quote": "Make Like A Tree And F*** Off."
+    "quote": "\"Make Like A Tree And F*** Off.\""
 },
 {
     "image": "data/images/bubbles.jpg",
@@ -29,7 +29,7 @@
     "role" : "Cat lover",
     "passtime": "Fixing shoppingcarts",
     "sport" : "wrestling",
-    "quote": "I Ain't Never Been So Frisky Before In My Whole Life!"
+    "quote": "\"I Ain't Never Been So Frisky Before In My Whole Life!\""
 },
 {
     "image": "data/images/lahey.jpg",
@@ -40,7 +40,7 @@
     "role": "Trailerpark supervisor",
     "passtime": "impersonating a police officer",
     "sport": "\"fun time\" with Randy",
-    "quote": "I AM the liquor"
+    "quote": "\"I AM the liquor\""
 },
 {
     "image": "data/images/randy.jpg",
@@ -51,7 +51,7 @@
     "role":"Assistant trailerpark supervisor",
     "passtime": "prostituting himself for cheeseburgers",
     "sport": "look at his gut, he doesn't do sport",
-    "quote": "Frig off, Barb!"
+    "quote": "\"Frig off, Barb!\""
 },
 {
     "image": "data/images/cyrus.jpg",
@@ -62,7 +62,7 @@
     "role":"local smartass",
     "passtime": "Cyrus is all business",
     "sport": "getting in shootouts with Julian and the boys.",
-    "quote": "F**k Off. I Got Work To Do."
+    "quote": "\"F**k Off. I Got Work To Do.\""
 },
 {
     "image": "data/images/ray.jpg",
@@ -73,7 +73,7 @@
     "role":"Ricky's father(?)",
     "passtime": "Trucking",
     "sport": "Drinking liquor for sport",
-    "quote": "Way she goes boys... F****** way she goes."
+    "quote": "\"Way she goes boys... F****** way she goes.\""
 },
 {
     "image": "data/images/jroc.jpg",
@@ -84,7 +84,7 @@
     "role":"Rapper",
     "passtime": "chillin, 'knowatimsayin'",
     "sport": "Battle rap",
-    "quote": "In this park it's one muthafucka for one and all muthafucka for all muthafucka's"
+    "quote": "\"In this park it's one muthafucka for one and all muthafucka for all muthafucka's\""
 },
 {
     "image": "data/images/lucy.jpg",
@@ -95,7 +95,7 @@
     "role":"Ricky's girlfriend(sometimes)",
     "passtime": "Cheating on Ricky",
     "sport": "flirting with police officers",
-    "quote": "(mockingly) Great! Trinity, why don't you get your stuff and go stay in the car with Daddy? Perfect!"
+    "quote": "*mockingly* \"Great! Trinity, why don't you get your stuff and go stay in the car with Daddy? Perfect!\""
 },
 {
     "image": "data/images/george.jpg",
@@ -106,7 +106,7 @@
     "role": "Corrupt police officer",
     "passtime": "being corrupt",
     "sport": "chasing Julian, Ricky and Bubbles for nothing",
-    "quote": "What we have here, Jim, is a sh*twolf. Do you know what a sh*twolf is? You never seem to have that crucial little thing called evidence. But each time, you cry sh*twolf, and each time I come running. No more, Jim. Never again."
+    "quote": "\"What we have here, Jim, is a sh*twolf. Do you know what a sh*twolf is? You never seem to have that crucial little thing called evidence. But each time, you cry sh*twolf, and each time I come running. No more, Jim. Never again.\""
 },
 {
     "image": "data/images/cory.jpg",
@@ -117,7 +117,7 @@
     "role": "errand-boy",
     "passtime": "f****** up the errands he is doing for Ricky, Julian and Bubbles",
     "sport": "being incredibly stupid",
-    "quote": "J-Roc raps about gangsters & guns, pimps & hos and Compton. The guy's not from Compton. He's a white kid from a trailer park. He should rap about what he really knows which is living in his mom's trailer eating peanut butter sandwiches."
+    "quote": "\"J-Roc raps about gangsters & guns, pimps & hos and Compton. The guy's not from Compton. He's a white kid from a trailer park. He should rap about what he really knows which is living in his mom's trailer eating peanut butter sandwiches.\""
 },
 {
     "image": "data/images/trevor.jpg",
@@ -128,6 +128,6 @@
     "role": "Cory's other half",
     "passtime": "looking like an alien",
     "sport": "being incredibly stupid",
-    "quote": "We can't fuck this up, Corey. Shit. What was I just talking about? -Trevor, shortly before fucking up."
+    "quote": "\"We can't fuck this up, Corey. Shit. What was I just talking about?\" -Trevor, shortly before fucking up."
 }
 ]

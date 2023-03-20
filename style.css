@@ -1,3 +1,11 @@
+:root{
+    --dark-purple: rgb(40, 17, 43);
+    --eggplant: rgb(69, 54, 67);
+    --davys-grey: rgb(94, 93, 92);
+    --reseda-green: rgb(120, 132, 117);
+    --cambridge-blue: rgb(141, 170, 145);
+}
+
 html{
     height: 100%;
     width: 100%;
@@ -6,19 +14,33 @@ html{
 body {
     margin: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: var(--eggplant);
 }
 
 header{
     display: inline;
     position: fixed;
     width: 100%;
-    background-color: darkgreen;
+    background-color: var(--dark-purple);
     text-align: center;
     color: white;
 }
 
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+nav button{
+    background-color: var(--cambridge-blue);
+    font-size: 1em;
+    cursor: pointer;
+}
+
 footer{
-    background-color: darkgreen;
+    background-color: var(--dark-purple);
     text-align: center;
     color: white;
 }
@@ -38,7 +60,7 @@ form {
 }
 
 form button {
-    background-color: darkgreen;
+    background-color: var(--dark-purple);
     border: none;
     height: 2em;
     width: 10em;
@@ -51,6 +73,7 @@ form button {
 
 main{
  padding-top: 100px;
+ background-color: var(--eggplant);
 }
 
 .grid-container{
@@ -82,7 +105,8 @@ main{
     padding: 1em;
     display: block;
     cursor: pointer;
-    box-shadow: 1px 1px 1px 2px rgb(45, 42, 42)
+    box-shadow: 1px 1px 1px 2px rgb(45, 42, 42);
+    background-color: var(--reseda-green);
 }
 
 #characters article img{
@@ -93,6 +117,7 @@ main{
 
 dialog{
     width: 75vw;
+    background-color: var(--cambridge-blue);
 }
 
 #dialog-grid{
@@ -106,4 +131,31 @@ dialog img {
 
 #dialog-quote {
     font-style: italic;
+}
+
+table {
+    border-spacing: 1px 1em;
+    font-size: 1.5em;
+}
+
+thead tr th{
+    color: white;
+}
+
+tbody tr {
+    height: 100px;
+    background-color: var(--reseda-green);
+    text-align: center;
+    box-shadow: 1px 1px 1px 2px rgb(45, 42, 42);
+}
+
+tbody tr td {
+    height: 100%;
+    row-gap: 0;
+    cursor: pointer;
+}
+
+tbody tr td img{
+    margin-top: 2px;
+    height: 5em;
 }

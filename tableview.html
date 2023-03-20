@@ -12,10 +12,20 @@
         <h1>Trailer Park Boys</h1>
     </header>
     <nav>
-        <button id="mode-btn" onclick="window.location.href='tableview.html'">Switch to table view</button>
+        <button id="mode-btn" onclick="window.location.href='index.html'">Switch to grid view</button>
     </nav>
     <main>  
-        <section id="characters" class="grid-container"></section>
+        <table id="characters">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Quote</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </main>
     <dialog id="character-dialog">
         <section id="dialog-grid"></section>
@@ -26,6 +36,6 @@
     <footer>
         <p>by Emil Vennervald Nielsen</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="table.js"></script>
 </body>
 </html>
