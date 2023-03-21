@@ -65,8 +65,7 @@ async function showDialogCharacter(article) {
                     <br>
                     <li>Sport of choice: ${capitalize(characterObj["sport"])}</li>
                 </ul>
-            </article>
-    `;
+            </article>`;
     dialogContainer.innerHTML = myHTML;
 }
 async function findCharacter(name) {
