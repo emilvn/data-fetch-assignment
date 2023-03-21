@@ -1,5 +1,6 @@
 :root{
     --antiflash-white: rgb(236, 238, 238);
+    --castleton-green-opague: rgba(4, 95, 68, 0.8);
     --castleton-green: rgb(4, 95, 68);
     --sea-green: rgb(2, 132, 64);
     --cambridge-blue: rgb(141, 170, 145);
@@ -39,6 +40,7 @@ main{
     cursor: pointer;
     box-shadow: 1px 1px 1px 2px rgb(45, 42, 42);
     background-color: var(--antiflash-white);
+    height: auto;
 }
 #characters article img{
     width:  100%;
@@ -51,18 +53,33 @@ main{
 /* ========== Dialog styling ========== */
 dialog{
     width: 75vw;
-    background-color: var(--castleton-green);
+    background-image: url(data/images/dialog-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: var(--antiflash-white);
-    border: none;
+    border: 3px solid var(--castleton-green);
 }
 dialog img {
     width: 100%;
+}
+dialog article{
+    background-color: var(--castleton-green-opague);
+    width: 60vw;
+    padding: 1em;
+    margin: auto;
 }
 #dialog-quote {
     font-style: italic;
 }
 figure {
-    display: block;
+    width: 100%;
+    margin: 0;
+}
+figure img{
+    width: 100%;
+}
+#dialog-info{
+    grid-column: 2/2;
 }
 form {
     margin: 2em;
@@ -71,13 +88,13 @@ form {
 form button {
     background-color: var(--sea-green);
     color: var(--antiflash-white);
-    border: none;
-    height: 2em;
-    width: 10em;
+    border: 1px solid var(--antiflash-white);
+    height: 2.5em;
+    width: 2.5em;
     cursor: pointer;
     position: absolute;
-    top: 1%;
-    right: 1%;
+    top: 0;
+    right: 0;
 }
 
 /* ========== Footer styling ========== */
@@ -97,6 +114,7 @@ footer{
 #dialog-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    text-align: left;
 }
 @media (min-width: 600px){
     .grid-container{
@@ -111,8 +129,5 @@ footer{
 @media (min-width: 1200px){
     .grid-container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    #dialog-grid{
-        grid-template-columns: 1fr 1fr;
     }
 }

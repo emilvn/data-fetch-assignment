@@ -4,18 +4,19 @@ window.addEventListener("load", main);
 /* ========== temporary object ========== */
 const chef = {
     "name": "Jerome \"Chef\" McElroy",
+    "nickname":"Chef",
     "image": "https://static.wikia.nocookie.net/southpark/images/4/47/15a.jpg",
     "occupation": "Cafeteria Chef",
     "age": 30,
     "voicedBy": "Isaac Hayes",
     "gender": "Male",
-    "religion": "Christianity",
+    "religion": "Christian",
     "catchPhrase": "Hello there, children.",
     "hairColor": "Black",
     "schoolgrade": "-",
-    "episodes": "S1E1 to S10E1",
+    "episodes": "S01E01 to S10E1",
     "appearances": 136,
-    "firstApperance": "Cartman Gets an Anal Probe"
+    "firstApperance": "S01E01"
 };
 
 /* =========== Global consts and main func =========== */
@@ -80,6 +81,7 @@ async function showDialogCharacter(article) {
     dialog.querySelector("#dialog-quote").textContent = `"${character.catchPhrase}"`;
     
     /* ===== Character Information ===== */
+    dialog.querySelector("#dialog-nickname").textContent = character.nickname;
     dialog.querySelector("#dialog-occupation").textContent = character.occupation;
     dialog.querySelector("#dialog-age").textContent = character.age;
     dialog.querySelector("#dialog-gender").textContent = character.gender;
@@ -88,7 +90,7 @@ async function showDialogCharacter(article) {
     dialog.querySelector("#dialog-grade").textContent = character.schoolgrade;
     dialog.querySelector("#dialog-voicedby").textContent = character.voicedBy;
     dialog.querySelector("#dialog-episodes").textContent = character.episodes;
-    dialog.querySelector("#dialog-firstappearance").textContent = `"${character.firstAppearance}"`;
+    dialog.querySelector("#dialog-firstappearance").textContent = character.firstAppearance;
     dialog.querySelector("#dialog-appearances").textContent = character.appearances;
 }
 async function findCharacter(name) {

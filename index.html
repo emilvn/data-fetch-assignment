@@ -15,13 +15,17 @@
         <section id="characters" class="grid-container"></section>
     </main>
     <dialog id="character-dialog">
-        <section id="dialog-grid">
-            <figure></figure>
-            <article>
+        <article id="dialog-grid">
+            <div>
                 <h2><span id="dialog-name"></span></h2>
                 <p id="dialog-quote"></p>
+                <figure></figure>
+            </div>
+            <div id="dialog-info">    
                 <h3>Character info</h3>
                 <ul>
+                    <li>Nickname: <span id="dialog-nickname"></span></li>
+                    <br>
                     <li>Occupation: <span id="dialog-occupation"></span></li>
                     <br>
                     <li>Age: <span id="dialog-age"></span></li>
@@ -42,10 +46,10 @@
                     <br>
                     <li>Appearances: <span id="dialog-appearances"></span></li>
                 </ul>
-            </article>
-        </section>
+            </div>
+        </article>
         <form method="dialog">
-            <button id="cancel-btn">Close</button>
+            <button id="cancel-btn">X</button>
         </form>
     </dialog>
     <footer>
