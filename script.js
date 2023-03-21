@@ -53,7 +53,7 @@ function showCharacter(obj) {
         <article>
             <img src=${obj.image}>
             <h2>${obj.name}</h2>
-            <p>${obj.role}</p>
+            <p>${obj.occupation}</p>
         </article>
     `;
     characterContainer.insertAdjacentHTML("beforeend", myHTML);
@@ -75,6 +75,9 @@ async function showDialogCharacter(article) {
 
     /* ===== name =====*/
     dialog.querySelector("#dialog-name").textContent = character.name;
+
+    /* ===== quote ===== */
+    dialog.querySelector("#dialog-quote").textContent = `"${character.catchPhrase}"`;
     
     /* ===== Character Information ===== */
     dialog.querySelector("#dialog-occupation").textContent = character.occupation;

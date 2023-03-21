@@ -1,8 +1,7 @@
 :root{
-    --dark-purple: rgb(40, 17, 43);
-    --eggplant: rgb(69, 54, 67);
-    --davys-grey: rgb(94, 93, 92);
-    --reseda-green: rgb(120, 132, 117);
+    --antiflash-white: rgb(236, 238, 238);
+    --castleton-green: rgb(4, 95, 68);
+    --sea-green: rgb(2, 132, 64);
     --cambridge-blue: rgb(141, 170, 145);
 }
 
@@ -25,7 +24,7 @@ header{
     display: inline;
     position: fixed;
     width: 100%;
-    background-color: var(--dark-purple);
+    background-color: var(--castleton-green);
     text-align: center;
     color: white;
 }
@@ -39,7 +38,7 @@ main{
     display: block;
     cursor: pointer;
     box-shadow: 1px 1px 1px 2px rgb(45, 42, 42);
-    background-color: var(--reseda-green);
+    background-color: var(--antiflash-white);
 }
 #characters article img{
     width:  100%;
@@ -52,7 +51,9 @@ main{
 /* ========== Dialog styling ========== */
 dialog{
     width: 75vw;
-    background-color: var(--cambridge-blue);
+    background-color: var(--castleton-green);
+    color: var(--antiflash-white);
+    border: none;
 }
 dialog img {
     width: 100%;
@@ -68,11 +69,11 @@ form {
     text-align: center;
 }
 form button {
-    background-color: var(--dark-purple);
+    background-color: var(--sea-green);
+    color: var(--antiflash-white);
     border: none;
     height: 2em;
     width: 10em;
-    color: white;
     cursor: pointer;
     position: absolute;
     top: 1%;
@@ -81,9 +82,9 @@ form button {
 
 /* ========== Footer styling ========== */
 footer{
-    background-color: var(--dark-purple);
+    background-color: white;
+    color: var(--sea-green);
     text-align: center;
-    color: white;
 }
 
 /* ========== Grid styling ========== */
@@ -112,6 +113,6 @@ footer{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     #dialog-grid{
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
