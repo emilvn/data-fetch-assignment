@@ -1,40 +1,40 @@
 "use strict";
 window.addEventListener("load", main);
 
+/* =========== Global consts and main func =========== */
 const characterContainer = document.querySelector("#characters");
 const dialogContainer = document.querySelector("#dialog-grid");
-/* =========== Main =========== */
 async function main() {
     const characters = await fetchData();
-    showCharacters(characters);
+    showAllCharacters(characters);
 }
-/* =========== Fetch data =========== */
+
+/* =========== Fetch character data =========== */
 async function fetchData() {
     const response = await fetch("data/tpb.json");
     const data = await response.json();
     return data;
 }
-/* =========== Display data =========== */
-function showCharacters(data) {
+
+/* =========== Display character data =========== */
+function showAllCharacters(data) {
     for (const obj of data) {
-        const myHTML = /*html*/`
+        showCharacter(obj);
+    } 
+}
+function showCharacter(obj) {
+    const myHTML = /*html*/ `
         <article>
             <img src=${obj["image"]}>
             <h2>${obj["name"]}</h2>
             <p>${capitalize(obj["role"])}</p>
         </article>
     `;
-        characterContainer.insertAdjacentHTML("beforeend", myHTML);
-        characterContainer.querySelector("article:last-child").addEventListener("click", showDialog);
-    } 
-}
-/* =========== Fortmat date correctly for Date object =========== */
-function formatDate(date) {
-    let dateArr = date.split("-");
-    dateArr = dateArr.reverse();
-    return dateArr.join("-");
+    characterContainer.insertAdjacentHTML("beforeend", myHTML);
+    characterContainer.querySelector("article:last-child").addEventListener("click", showDialog);
 }
 
+/* ========== Dialog functions ========== */
 function showDialog() {
     showDialogCharacter(this);
     document.querySelector("#character-dialog").showModal();
@@ -75,7 +75,13 @@ async function findCharacter(name) {
         if (obj["name"] === name) return obj;
     }
 }
-/* =========== Calculate age from date of birth =========== */
+
+/* =========== Date/Age functions =========== */
+function formatDate(date) {
+    let dateArr = date.split("-");
+    dateArr = dateArr.reverse();
+    return dateArr.join("-");
+}
 function getCurrentAge(birthdate) {
     const today = new Date(Date.now());
     const dateOfBirth = new Date(formatDate(birthdate));
@@ -86,6 +92,7 @@ function getCurrentAge(birthdate) {
         return today.getFullYear() - dateOfBirth.getFullYear();
     }
 }
+
 /* =========== Text edit functions =========== */
 function capitalize(name) {
     return name[0].toUpperCase() + name.substring(1).toLowerCase();
