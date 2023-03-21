@@ -88,7 +88,7 @@ async function showDialogCharacter(article) {
     dialog.querySelector("#dialog-grade").textContent = character.schoolgrade;
     dialog.querySelector("#dialog-voicedby").textContent = character.voicedBy;
     dialog.querySelector("#dialog-episodes").textContent = character.episodes;
-    dialog.querySelector("#dialog-firstappearance").textContent = character.firstAppearance;
+    dialog.querySelector("#dialog-firstappearance").textContent = `"${character.firstAppearance}"`;
     dialog.querySelector("#dialog-appearances").textContent = character.appearances;
 }
 async function findCharacter(name) {
