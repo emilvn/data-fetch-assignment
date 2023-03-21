@@ -1,6 +1,23 @@
 "use strict";
 window.addEventListener("load", main);
 
+/* ========== temporary object ========== */
+const chef = {
+    "name": "Jerome \"Chef\" McElroy",
+    "image": "https://static.wikia.nocookie.net/southpark/images/4/47/15a.jpg",
+    "occupation": "Cafeteria Chef",
+    "age": 30,
+    "voicedBy": "Isaac Hayes",
+    "gender": "Male",
+    "religion": "Christianity",
+    "catchPhrase": "Hello there, children.",
+    "hairColor": "Black",
+    "schoolgrade": "-",
+    "episodes": "S1E1 to S10E1",
+    "appearances": 136,
+    "firstApperance": "Cartman Gets an Anal Probe"
+};
+
 /* =========== Global consts and main func =========== */
 const characterContainer = document.querySelector("#characters");
 const dialogContainer = document.querySelector("#dialog-grid");
