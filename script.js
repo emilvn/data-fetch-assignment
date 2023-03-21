@@ -11,9 +11,18 @@ async function main() {
 
 /* =========== Fetch character data =========== */
 async function fetchData() {
-    const response = await fetch("data/tpb.json");
-    const data = await response.json();
-    return data;
+    const DATA_URL = "data/tpb.json";
+    try {
+        const response = await fetch(DATA_URL);
+        if (!response.ok) {
+            throw new Error("Network response not ok")
+        }
+        const data = await response.json();
+        return data;
+    }
+    catch (err) {
+        throw new Error(err);
+    }
 }
 
 /* =========== Display character data =========== */
