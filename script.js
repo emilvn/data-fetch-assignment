@@ -70,10 +70,8 @@ async function showDialog(character) {
     dialog.querySelector("figure").innerHTML = /*html*/`
     <img src="${character.image}">`;
 
-    /* ===== name =====*/
+    /* ===== name and catchphrase =====*/
     dialog.querySelector("#dialog-name").textContent = character.name;
-
-    /* ===== quote ===== */
     dialog.querySelector("#dialog-quote").textContent = `"${character.catchPhrase}"`;
     
     /* ===== Character Information ===== */
