@@ -13,7 +13,7 @@ const chef = {
     "religion": "Christian",
     "catchPhrase": "Hello there, children.",
     "hairColor": "Black",
-    "schoolgrade": "-",
+    "schoolgrade": null,
     "episodes": "S01E01 to S10E1",
     "appearances": 136,
     "firstApperance": "S01E01"
@@ -83,7 +83,7 @@ async function showDialog(character) {
     dialog.querySelector("#dialog-gender").textContent = character.gender;
     dialog.querySelector("#dialog-haircolor").textContent = character.hairColor;
     dialog.querySelector("#dialog-religion").textContent = character.religion;
-    dialog.querySelector("#dialog-grade").textContent = character.schoolgrade;
+    dialog.querySelector("#dialog-grade").textContent = character.schoolGrade;
     dialog.querySelector("#dialog-voicedby").textContent = `${character.name} is voiced by ${character.voicedBy}`;
     dialog.querySelector("#dialog-episodes").textContent = character.episodes;
     dialog.querySelector("#dialog-firstappearance").textContent = character.firstAppearance;
