@@ -19,12 +19,12 @@ const chef = {
     "firstApperance": "S01E01"
 };
 
-/* =========== Global consts and main func =========== */
-const characterContainer = document.querySelector("#characters");
-const dialogContainer = document.querySelector("#dialog-grid");
 /* ========== Database url ========== */
 const DATA_URL = "data/southpark.json";
 
+/* =========== Global consts and main func =========== */
+const characterContainer = document.querySelector("#characters");
+const dialogContainer = document.querySelector("#dialog-grid");
 async function main() {
     const characters = await fetchData(DATA_URL);
     showAllCharacters(characters);
