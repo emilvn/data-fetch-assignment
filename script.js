@@ -22,16 +22,18 @@ const chef = {
 /* =========== Global consts and main func =========== */
 const characterContainer = document.querySelector("#characters");
 const dialogContainer = document.querySelector("#dialog-grid");
+/* ========== Database url ========== */
+const DATA_URL = "data/southpark.json";
+
 async function main() {
-    const characters = await fetchData();
+    const characters = await fetchData(DATA_URL);
     showAllCharacters(characters);
 }
 
 /* =========== Fetch character data =========== */
-async function fetchData() {
-    const DATA_URL = "data/southpark.json";
+async function fetchData(url) {
     try {
-        const response = await fetch(DATA_URL);
+        const response = await fetch(url);
         if (!response.ok) {
             throw new Error("Network response not ok")
         }
@@ -61,7 +63,7 @@ function showCharacter(obj) {
     characterContainer.querySelector("article:last-child").addEventListener("click", () => { showDialog(obj) });
 }
 
-/* ========== Dialog functions ========== */
+/* ========== Dialog function ========== */
 async function showDialog(character) {
     const dialog = document.querySelector("#character-dialog");
     /* ===== image ===== */
