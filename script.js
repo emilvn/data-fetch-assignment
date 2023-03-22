@@ -58,17 +58,13 @@ function showCharacter(obj) {
         </article>
     `;
     characterContainer.insertAdjacentHTML("beforeend", myHTML);
-    characterContainer.querySelector("article:last-child").addEventListener("click", showDialog);
+    characterContainer.querySelector("article:last-child").addEventListener("click", () => { showDialog(obj) });
 }
 
 /* ========== Dialog functions ========== */
-function showDialog() {
-    showDialogCharacter(this);
-    document.querySelector("#character-dialog").showModal();
-}
-async function showDialogCharacter(article) {
-    const selectedCharacterName = article.querySelector("h2").textContent;
-    const character = await findCharacter(selectedCharacterName);
+async function showDialog(character) {
+    // const selectedCharacterName = article.querySelector("h2").textContent;
+    // const character = await findCharacter(selectedCharacterName);
     const dialog = document.querySelector("#character-dialog");
     /* ===== image ===== */
     dialog.querySelector("figure").innerHTML = /*html*/`
@@ -92,10 +88,7 @@ async function showDialogCharacter(article) {
     dialog.querySelector("#dialog-episodes").textContent = character.episodes;
     dialog.querySelector("#dialog-firstappearance").textContent = character.firstAppearance;
     dialog.querySelector("#dialog-appearances").textContent = character.appearances;
-}
-async function findCharacter(name) {
-    const characters = await fetchData();
-    for (const obj of characters) {
-        if (obj.name === name) return obj;
-    }
+    
+    /* ===== Show dialog ===== */
+    document.querySelector("#character-dialog").showModal();
 }
