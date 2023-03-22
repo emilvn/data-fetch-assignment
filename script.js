@@ -60,7 +60,7 @@ function showCharacter(obj) {
         </article>
     `;
     characterContainer.insertAdjacentHTML("beforeend", myHTML);
-    characterContainer.querySelector("article:last-child").addEventListener("click", () => { showDialog(obj) });
+    characterContainer.querySelector("article:last-child").addEventListener("click", () => showDialog(obj));
 }
 
 /* ========== Dialog function ========== */
