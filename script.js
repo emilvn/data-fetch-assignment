@@ -63,8 +63,6 @@ function showCharacter(obj) {
 
 /* ========== Dialog functions ========== */
 async function showDialog(character) {
-    // const selectedCharacterName = article.querySelector("h2").textContent;
-    // const character = await findCharacter(selectedCharacterName);
     const dialog = document.querySelector("#character-dialog");
     /* ===== image ===== */
     dialog.querySelector("figure").innerHTML = /*html*/`
