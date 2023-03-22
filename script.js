@@ -5,7 +5,7 @@ window.addEventListener("load", main);
 const chef = {
     "name": "Jerome \"Chef\" McElroy",
     "nickname":"Chef",
-    "image": "https://static.wikia.nocookie.net/southpark/images/4/47/15a.jpg",
+    "image": "https://static.wikia.nocookie.net/southpark/images/3/38/JeromeChef.png",
     "occupation": "Cafeteria Chef",
     "age": 30,
     "voicedBy": "Isaac Hayes",
