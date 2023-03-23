@@ -48,26 +48,18 @@ function showCharacter(obj) {
 /* ========== Dialog function ========== */
 async function showDialog(character) {
     const dialog = document.querySelector("#character-dialog");
-    /* ===== image ===== */
-    dialog.querySelector("figure").innerHTML = /*html*/`
-    <img src="${character.image}">`;
-
-    /* ===== name and catchphrase =====*/
-    dialog.querySelector("#dialog-name").textContent = character.name;
-    dialog.querySelector("#dialog-quote").textContent = `"${character.catchPhrase}"`;
     
-    /* ===== Character Information ===== */
-    dialog.querySelector("#dialog-nickname").textContent = character.nickname;
-    dialog.querySelector("#dialog-occupation").textContent = character.occupation;
-    dialog.querySelector("#dialog-age").textContent = character.age;
-    dialog.querySelector("#dialog-gender").textContent = character.gender;
-    dialog.querySelector("#dialog-haircolor").textContent = character.hairColor;
-    dialog.querySelector("#dialog-religion").textContent = character.religion;
-    dialog.querySelector("#dialog-grade").textContent = character.schoolGrade;
-    dialog.querySelector("#dialog-voicedby").textContent = `${character.name} is voiced by ${character.voicedBy}`;
-    dialog.querySelector("#dialog-episodes").textContent = character.episodes;
-    dialog.querySelector("#dialog-firstappearance").textContent = character.firstAppearance;
-    dialog.querySelector("#dialog-appearances").textContent = character.appearances;
+    /* ===== image, catchphrase and voiced by ===== */
+    dialog.querySelector("figure").innerHTML = /*html*/`<img src="${character.image}">`;
+    dialog.querySelector("#dialog-catchPhrase").textContent = `"${character.catchPhrase}"`;
+    dialog.querySelector("#dialog-voicedBy").textContent = `${character.name} is voiced by ${character.voicedBy}`;
+
+    /* ===== rest of character information ===== */
+    for (let key in character) {
+        if (key !== "image" && key !== "catchPhrase" && key !== "voicedBy") {
+            dialog.querySelector(`#dialog-${key}`).textContent = character[key];
+        }
+    }
     
     /* ===== Show dialog ===== */
     document.querySelector("#character-dialog").showModal();
