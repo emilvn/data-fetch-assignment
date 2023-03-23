@@ -36,6 +36,7 @@ main{
  padding-top: 100px;
 }
 #characters article{
+    border-radius: 1em;
     padding: 1em;
     display: block;
     cursor: pointer;
@@ -71,6 +72,7 @@ dialog article{
     width: 60vw;
     padding: 1em;
     margin: auto;
+    border-radius: 1em;
 }
 #dialog-quote {
     font-style: italic;
@@ -97,8 +99,13 @@ form button {
     width: 2.5em;
     cursor: pointer;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0.2em;
+    right: 0.5em;
+    border-radius: 3em;
+    box-shadow: 0 0 0 1px var(--opague-black);
+}
+form button:hover{
+    box-shadow: 0 0 0 2px var(--opague-black);
 }
 
 /* ========== Footer styling ========== */
