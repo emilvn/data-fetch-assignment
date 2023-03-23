@@ -4,6 +4,7 @@
     --castleton-green: rgb(4, 95, 68);
     --sea-green: rgb(2, 132, 64);
     --cambridge-blue: rgb(141, 170, 145);
+    --opague-black: rgba(0.5, 0.5, 0.5, 0.6);
 }
 
 /* ========== General styling ========== */
@@ -38,9 +39,12 @@ main{
     padding: 1em;
     display: block;
     cursor: pointer;
-    box-shadow: 1px 1px 1px 2px rgb(45, 42, 42);
+    box-shadow: 1px 1px 1px 2px var(--opague-black);
     background-color: var(--antiflash-white);
     height: auto;
+}
+#characters article:hover {
+    box-shadow: 2px 2px 2px 3px var(--opague-black);
 }
 #characters article img{
     width:  100%;
