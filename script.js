@@ -1,24 +1,6 @@
 "use strict";
 window.addEventListener("load", main);
 
-/* ========== temporary object ========== */
-const chef = {
-    "name": "Jerome \"Chef\" McElroy",
-    "nickname":"Chef",
-    "image": "https://static.wikia.nocookie.net/southpark/images/3/38/JeromeChef.png",
-    "occupation": "Cafeteria Chef",
-    "age": 30,
-    "voicedBy": "Isaac Hayes",
-    "gender": "Male",
-    "religion": "Christian",
-    "catchPhrase": "Hello there, children.",
-    "hairColor": "Black",
-    "schoolgrade": null,
-    "episodes": "S01E01 to S10E1",
-    "appearances": 136,
-    "firstApperance": "S01E01"
-};
-
 /* ========== Database url ========== */
 const DATA_URL = "data/southpark.json";
 
