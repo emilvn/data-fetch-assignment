@@ -48,7 +48,7 @@ function showCharacter(obj) {
 /* ========== Dialog function ========== */
 async function showDialog(character) {
     const dialog = document.querySelector("#character-dialog");
-    
+
     /* ===== image, catchphrase and voiced by ===== */
     dialog.querySelector("figure").innerHTML = /*html*/`<img src="${character.image}">`;
     dialog.querySelector("#dialog-catchPhrase").textContent = `"${character.catchPhrase}"`;
@@ -56,6 +56,9 @@ async function showDialog(character) {
 
     /* ===== rest of character information ===== */
     for (let key in character) {
+        if (!character[key]) {
+            dialog.querySelector(`#dialog-${key}`).parentNode.style.display = "none";
+        }
         if (key !== "image" && key !== "catchPhrase" && key !== "voicedBy") {
             dialog.querySelector(`#dialog-${key}`).textContent = character[key];
         }
@@ -63,4 +66,14 @@ async function showDialog(character) {
     
     /* ===== Show dialog ===== */
     document.querySelector("#character-dialog").showModal();
+
+    /* ===== reset hidden elements on dialog close ===== */
+    dialog.querySelector("#cancel-btn").addEventListener("click", resetInfoDisplayMode);
+}
+
+function resetInfoDisplayMode() {
+    const characterInfoElements = document.querySelectorAll(".character-info");
+    for (let i = 0; i < characterInfoElements.length; i++){
+        characterInfoElements[i].style.display = "block";
+    }
 }

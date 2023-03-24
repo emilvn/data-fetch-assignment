@@ -74,7 +74,7 @@ dialog article{
     margin: auto;
     border-radius: 1em;
 }
-#dialog-quote {
+#dialog-catchPhrase {
     font-style: italic;
 }
 figure {
@@ -86,6 +86,9 @@ figure img{
 }
 #dialog-info{
     grid-column: 2/2;
+}
+#dialog-info li{
+    margin: 1em;
 }
 form {
     margin: 2em;
