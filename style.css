@@ -15,7 +15,7 @@ html{
 body {
     margin: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-image: url(data/images/background.jpg);
+    background-image: url(data/images/background.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -58,7 +58,7 @@ main{
 /* ========== Dialog styling ========== */
 dialog{
     width: 75vw;
-    background-image: url(data/images/dialog-bg.jpg);
+    background-image: url(data/images/dialog-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--antiflash-white);

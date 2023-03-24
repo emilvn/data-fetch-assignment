@@ -2,7 +2,7 @@
 window.addEventListener("load", main);
 
 /* ========== Database url ========== */
-const DATA_URL = "data/southpark.json";
+const DATA_URL = "data/temp.json";
 
 /* ========== Array of different kinds of undefined values ========== */
 const undefinedArray = ["unknown", "undefined", "n/a", "none", "", "nothing", "-", "no data", "null"];
@@ -53,7 +53,7 @@ async function showDialog(character) {
     const dialog = document.querySelector("#character-dialog");
 
     /* ===== image, catchphrase and voiced by ===== */
-    dialog.querySelector("figure").innerHTML = /*html*/`<img src="${character.image}">`;
+    dialog.querySelector("figure").innerHTML = /*html*/`<img id="dialog-image" src="${character.image}">`;
     dialog.querySelector("#dialog-catchPhrase").textContent = `"${character.catchPhrase}"`;
     dialog.querySelector("#dialog-voicedBy").textContent = `${character.name} is voiced by ${character.voicedBy}`;
 
