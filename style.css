@@ -33,7 +33,7 @@ header{
 
 /* ========== Main section styling ========== */
 main{
- padding-top: 100px;
+ padding-top: 6em;
 }
 #characters article{
     border-radius: 1em;
