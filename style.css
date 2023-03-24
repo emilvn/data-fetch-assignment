@@ -1,10 +1,9 @@
 :root{
-    --antiflash-white: rgb(236, 238, 238);
-    --castleton-green-opague: rgba(4, 95, 68, 0.8);
-    --castleton-green: rgb(4, 95, 68);
-    --sea-green: rgb(2, 132, 64);
-    --cambridge-blue: rgb(141, 170, 145);
+    --columbia-blue: rgb(196, 220, 248);
+    --yale-blue-opague: rgb(0, 50, 118, 0.8);
+    --yale-blue: rgb(0, 50, 118);;
     --opague-black: rgba(0.5, 0.5, 0.5, 0.6);
+    --space-cadet: #222D48;
 }
 
 /* ========== General styling ========== */
@@ -19,6 +18,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    color: var(--space-cadet)
+
 }
 
 /* ========== Header styling ========== */
@@ -26,7 +27,7 @@ header{
     display: inline;
     position: fixed;
     width: 100%;
-    background-color: var(--castleton-green);
+    background-color: var(--yale-blue);
     text-align: center;
     color: white;
 }
@@ -41,7 +42,7 @@ main{
     display: block;
     cursor: pointer;
     box-shadow: 1px 1px 1px 2px var(--opague-black);
-    background-color: var(--antiflash-white);
+    background-color: var(--columbia-blue);
     height: auto;
 }
 #characters article:hover {
@@ -58,17 +59,17 @@ main{
 /* ========== Dialog styling ========== */
 dialog{
     width: 75vw;
-    background-image: url(data/images/dialog-bg.png);
+    background-image: url(data/images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    color: var(--antiflash-white);
-    border: 3px solid var(--castleton-green);
+    color: var(--columbia-blue);
+    border: 3px solid var(--yale-blue);
 }
 dialog img {
     width: 100%;
 }
 dialog article{
-    background-color: var(--castleton-green-opague);
+    background-color: var(--yale-blue-opague);
     width: 60vw;
     padding: 1em;
     margin: auto;
@@ -95,9 +96,9 @@ form {
     text-align: center;
 }
 form button {
-    background-color: var(--sea-green);
-    color: var(--antiflash-white);
-    border: 1px solid var(--antiflash-white);
+    background-color: var(--space-cadet);
+    color: var(--columbia-blue);
+    border: 1px solid var(--columbia-blue);
     height: 2.5em;
     width: 2.5em;
     cursor: pointer;
@@ -113,8 +114,7 @@ form button:hover{
 
 /* ========== Footer styling ========== */
 footer{
-    background-color: white;
-    color: var(--sea-green);
+    background-color: var(--columbia-blue);
     text-align: center;
 }
 
