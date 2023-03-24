@@ -4,6 +4,9 @@ window.addEventListener("load", main);
 /* ========== Database url ========== */
 const DATA_URL = "data/southpark.json";
 
+/* ========== Array of different kinds of undefined values ========== */
+const undefinedArray = ["unknown", "undefined", "n/a", "none", "", "nothing", "-", "no data", "null"];
+
 /* =========== Global consts and main func =========== */
 const characterContainer = document.querySelector("#characters");
 const dialogContainer = document.querySelector("#dialog-grid");
@@ -38,7 +41,7 @@ function showCharacter(obj) {
         <article>
             <img src=${obj.image}>
             <h2>${obj.name}</h2>
-            <p>${obj.occupation}</p>
+            <p>${!undefinedArray.includes(String(obj.occupation).toLowerCase())? obj.occupation || "" : ""}</p>
         </article>
     `;
     characterContainer.insertAdjacentHTML("beforeend", myHTML);
@@ -56,7 +59,7 @@ async function showDialog(character) {
 
     /* ===== rest of character information ===== */
     for (let key in character) {
-        if (!character[key]) {
+        if (!character[key] || undefinedArray.includes(String(character[key]).toLowerCase())) {
             dialog.querySelector(`#dialog-${key}`).parentNode.style.display = "none";
         }
         if (key !== "image" && key !== "catchPhrase" && key !== "voicedBy") {
@@ -70,7 +73,6 @@ async function showDialog(character) {
     /* ===== reset hidden elements on dialog close ===== */
     dialog.querySelector("#cancel-btn").addEventListener("click", resetInfoDisplayMode);
 }
-
 function resetInfoDisplayMode() {
     const characterInfoElements = document.querySelectorAll(".character-info");
     for (let i = 0; i < characterInfoElements.length; i++){
