@@ -2,7 +2,7 @@
 window.addEventListener("load", main);
 
 /* ========== Database url ========== */
-const DATA_URL = "data/temp.json";
+const DATA_URL = "https://cederdorff.github.io/dat-js/05-data/southpark.json";
 
 /* ========== Array of different kinds of undefined values ========== */
 const undefinedArray = ["unknown", "undefined", "n/a", "none", "", "nothing", "-", "no data", "null"];
