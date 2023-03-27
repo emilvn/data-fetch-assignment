@@ -4,8 +4,8 @@
     --yale-blue: rgb(0, 50, 118);;
     --opague-black: rgba(0.5, 0.5, 0.5, 0.6);
     --space-cadet: #222D48;
+    --background-image: url(data/images/background.png)
 }
-
 /* ========== General styling ========== */
 html{
     height: 100%;
@@ -14,24 +14,20 @@ html{
 body {
     margin: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-image: url(data/images/background.png);
+    background-image: var(--background-image);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color: var(--space-cadet)
-
+    color: var(--space-cadet);
 }
-
 /* ========== Header styling ========== */
 header{
-    display: inline;
     position: fixed;
     width: 100%;
     background-color: var(--yale-blue);
     text-align: center;
     color: white;
 }
-
 /* ========== Main section styling ========== */
 main{
     padding-top: 6em;
@@ -51,15 +47,12 @@ main{
 #characters article img{
     width:  100%;
     height: 300px;
-    object-fit: cover;
-    overflow: clip;
-    overflow-clip-margin: content-box;
+    object-fit: contain;
 }
-
 /* ========== Dialog styling ========== */
 dialog{
     width: 75vw;
-    background-image: url(data/images/background.png);
+    background-image: var(--background-image);
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--columbia-blue);
@@ -111,13 +104,11 @@ form button {
 form button:hover{
     box-shadow: 0 0 0 2px var(--opague-black);
 }
-
 /* ========== Footer styling ========== */
 footer{
     background-color: var(--columbia-blue);
     text-align: center;
 }
-
 /* ========== Grid styling ========== */
 .grid-container{
     display: grid;
