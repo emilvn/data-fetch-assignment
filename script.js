@@ -52,17 +52,21 @@ function showCharacter(obj) {
 async function showDialog(character) {
     const dialog = document.querySelector("#character-dialog");
 
-    /* ===== image, catchphrase and voiced by ===== */
-    dialog.querySelector("figure").innerHTML = /*html*/`<img id="dialog-image" src="${character.image}">`;
-    dialog.querySelector("#dialog-catchphrase").textContent = `"${character.catchPhrase}"`;
-    dialog.querySelector("#dialog-voicedby").textContent = `${character.name} is voiced by ${character.voicedBy}`;
-
-    /* ===== rest of character information ===== */
+    /* ===== character information ===== */
     for (let key in character) {
         if (!character[key] || undefinedArray.includes(String(character[key]).toLowerCase())) {
             dialog.querySelector(`#dialog-${key.toLowerCase()}`).parentNode.style.display = "none";
         }
-        if (key !== "image" && key !== "catchPhrase" && key !== "voicedBy") {
+        else if (key.toLowerCase() === "image") {
+            dialog.querySelector("figure").innerHTML = /*html*/`<img id="dialog-image" src="${character[key]}">`;
+        }
+        else if (key.toLowerCase() === "catchphrase") {
+            dialog.querySelector("#dialog-catchphrase").textContent = `"${character.catchPhrase}"`;
+        }
+        else if (key.toLowerCase() === "voicedby") {
+            dialog.querySelector("#dialog-voicedby").textContent = `${character.name} is voiced by ${character.voicedBy}`;
+        }
+        else {
             dialog.querySelector(`#dialog-${key.toLowerCase()}`).textContent = character[key];
         }
     }
