@@ -39,11 +39,11 @@ function showAllCharacters(data) {
 function showCharacter(obj) {
     const myHTML = /*html*/ `
         <article>
-            <img src=${obj.image}>
-            <h2>${obj.name}</h2>
-            <p>${!undefinedArray.includes(String(obj.occupation).toLowerCase())? obj.occupation || "" : ""}</p>
+        <img src=${obj.image}>
+        <h2>${obj.name}</h2>
+        <p>${!undefinedArray.includes(String(obj.occupation).toLowerCase())? obj.occupation || "" : ""}</p>
         </article>
-    `;
+        `;
     characterContainer.insertAdjacentHTML("beforeend", myHTML);
     characterContainer.querySelector("article:last-child").addEventListener("click", () => showDialog(obj));
 }
