@@ -23,7 +23,7 @@ async function fetchData(url) {
         return data;
     }
     catch (err) {
-        throw new Error(err);
+        throw err;
     }
 }
 
