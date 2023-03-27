@@ -1,7 +1,7 @@
 "use strict";
 window.addEventListener("load", main);
 
-/* ========== Database url ========== */
+/* ========== Database URL ========== */
 const DATA_URL = "https://cederdorff.github.io/dat-js/05-data/southpark.json";
 
 /* ========== Array of different kinds of undefined values ========== */
@@ -30,10 +30,21 @@ async function fetchData(url) {
     }
 }
 
+/* ========== Object key validation ========== */
+function validateObject(obj) {
+    const correctKeys = ["name", "nickname", "image", "occupation", "age", "voicedby", "gender", "religion", "catchphrase", "haircolor", "schoolgrade", "episodes", "appearances", "firstappearance"];
+    for (const key in obj) {
+        if (!correctKeys.includes(key.toLowerCase())){
+            return false;
+        }
+    }
+    return true;
+}
+
 /* =========== Display character data =========== */
 function showAllCharacters(data) {
     for (const obj of data) {
-        showCharacter(obj);
+        if(validateObject(obj)) showCharacter(obj);
     } 
 }
 function showCharacter(obj) {
@@ -73,7 +84,6 @@ async function showDialog(character) {
                 break;
         }
     }
-    
     /* ===== Show dialog ===== */
     document.querySelector("#character-dialog").showModal();
 
