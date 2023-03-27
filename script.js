@@ -4,9 +4,6 @@ window.addEventListener("load", main);
 /* ========== Database URL ========== */
 const DATA_URL = "https://cederdorff.github.io/dat-js/05-data/southpark.json";
 
-/* ========== Array of different kinds of undefined values ========== */
-const undefinedArray = ["unknown", "undefined", "n/a", "none", "", "nothing", "-", "no data", "null"];
-
 /* =========== Global consts and main func =========== */
 const characterContainer = document.querySelector("#characters");
 const dialogContainer = document.querySelector("#dialog-grid");
@@ -40,6 +37,10 @@ function validateObject(obj) {
     }
     return true;
 }
+function isUndefined(value) {
+    const UNDEFINED_VALUES = ["unknown", "undefined", "n/a", "none", "", "nothing", "-", "no data", "null"];
+    return UNDEFINED_VALUES.includes(String(value).toLowerCase());
+}
 
 /* =========== Display character data =========== */
 function showAllCharacters(data) {
@@ -52,7 +53,7 @@ function showCharacter(obj) {
         <article>
         <img src=${obj.image}>
         <h2>${obj.name}</h2>
-        <p>${!undefinedArray.includes(String(obj.occupation).toLowerCase())? obj.occupation || "" : ""}</p>
+        <p>${!isUndefined(obj.occupation)? obj.occupation || "" : ""}</p>
         </article>
         `;
     characterContainer.insertAdjacentHTML("beforeend", myHTML);
@@ -65,7 +66,7 @@ async function showDialog(character) {
 
     /* ===== character information ===== */
     for (let key in character) {
-        if (!character[key] || undefinedArray.includes(String(character[key]).toLowerCase())) {
+        if (!character[key] || isUndefined(character[key])) {
             dialog.querySelector(`#dialog-${key.toLowerCase()}`).parentNode.style.display = "none";
         }
         switch (key.toLowerCase()) {
