@@ -27,11 +27,12 @@ async function fetchData(url) {
     }
 }
 
-/* ========== Object key validation ========== */
+/* ========== Object key/value validation ========== */
 function validateObject(obj) {
-    const correctKeys = ["name", "nickname", "image", "occupation", "age", "voicedby", "gender", "religion", "catchphrase", "haircolor", "schoolgrade", "episodes", "appearances", "firstappearance"];
+    const REQUIRED_KEYS = ["name", "image", "episodes", "appearances", "firstappearance"];
+    const CORRECT_KEYS = ["name", "nickname", "image", "occupation", "age", "voicedby", "gender", "religion", "catchphrase", "haircolor", "schoolgrade", "episodes", "appearances", "firstappearance"];
     for (const key in obj) {
-        if (!correctKeys.includes(key.toLowerCase())){
+        if (!CORRECT_KEYS.includes(key.toLowerCase())){
             return false;
         }
     }
