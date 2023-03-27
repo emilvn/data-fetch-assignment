@@ -62,11 +62,11 @@ async function showDialog(character) {
                 dialog.querySelector("figure").innerHTML = /*html*/`<img id="dialog-image" src="${character[key]}">`;
                 break;
             case "catchphrase":
-                dialog.querySelector("#dialog-catchphrase").textContent = `"${character.catchPhrase}"`;
+                dialog.querySelector("#dialog-catchphrase").textContent = `"${character[key]}"`;
                 break;
         
             case "voicedby":
-                dialog.querySelector("#dialog-voicedby").textContent = `${character.name} is voiced by ${character.voicedBy}`;
+                dialog.querySelector("#dialog-voicedby").textContent = `${character.name} is voiced by ${character[key]}`;
                 break;
             default:
                 dialog.querySelector(`#dialog-${key.toLowerCase()}`).textContent = character[key];
