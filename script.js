@@ -26,7 +26,6 @@ async function fetchData(url) {
         throw err;
     }
 }
-
 /* ========== Object key/value validation ========== */
 function validateObject(obj) {
     const CORRECT_KEYS = ["name", "nickname", "image", "occupation", "age", "voicedby", "gender", "religion", "catchphrase", "haircolor", "schoolgrade", "episodes", "appearances", "firstappearance"];
@@ -41,7 +40,6 @@ function isUndefined(value) {
     const UNDEFINED_VALUES = ["unknown", "undefined", "n/a", "none", "", "nothing", "-", "no data", "null"];
     return UNDEFINED_VALUES.includes(String(value).toLowerCase());
 }
-
 /* =========== Display character data =========== */
 function showAllCharacters(data) {
     for (const obj of data) {
@@ -59,7 +57,6 @@ function showCharacter(obj) {
     characterContainer.insertAdjacentHTML("beforeend", myHTML);
     characterContainer.querySelector("article:last-child").addEventListener("click", () => showDialog(obj));
 }
-
 /* ========== Dialog function ========== */
 async function showDialog(character) {
     const dialog = document.querySelector("#character-dialog");
