@@ -10,7 +10,7 @@
     "catchPhrase": "Hello there, children.",
     "hairColor": "Black",
     "schoolGrade": null,
-    "episodes": "S01E01 to S10E01",
+    "episodes": "S01E01,...,S10E01",
     "appearances": 136,
     "firstAppearance": "S01E01"
 }
