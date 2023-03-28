@@ -11,7 +11,6 @@ async function main() {
     const characters = await fetchData(DATA_URL);
     showAllCharacters(characters);
 }
-
 /* =========== Fetch character data =========== */
 async function fetchData(url) {
     try {
