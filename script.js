@@ -25,15 +25,29 @@ async function fetchData(url) {
         throw err;
     }
 }
-/* ========== Object key/value validation ========== */
+/* ========== Object validation ========== */
 function validateObject(obj) {
     const CORRECT_KEYS = ["name", "nickname", "image", "occupation", "age", "voicedby", "gender", "religion", "catchphrase", "haircolor", "schoolgrade", "episodes", "appearances", "firstappearance"];
+    validateImage(obj);
     for (const key in obj) {
         if (!CORRECT_KEYS.includes(key.toLowerCase())){
             return false;
         }
     }
     return true;
+}
+function validateImage(obj) {
+    const regex = /^(.+?\.(png|jpe?g|gif)).*$/i;
+    if (obj.image.indexOf(".png") === obj.image.lastIndexOf(".png") &&
+        obj.image.indexOf(".jpg") === obj.image.lastIndexOf(".jpg") &&
+        obj.image.indexOf(".jpeg") === obj.image.lastIndexOf(".jpeg") &&
+        obj.image.indexOf(".gif") === obj.image.lastIndexOf(".gif"))
+    {
+        obj.image = obj.image.replace(regex, '$1');
+    }
+    if (!/^https?/.test(obj.image) || /imgur/.test(obj.image)) {
+        obj.image = "data/images/placeholder.png";
+    }
 }
 function isUndefined(value) {
     const UNDEFINED_VALUES = ["unknown", "undefined", "n/a", "none", "", "nothing", "-", "no data", "null"];
