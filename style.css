@@ -100,6 +100,7 @@ form button {
     right: 0.5em;
     border-radius: 3em;
     box-shadow: 0 0 0 1px var(--opague-black);
+    text-align: center;
 }
 form button:hover{
     box-shadow: 0 0 0 2px var(--opague-black);
