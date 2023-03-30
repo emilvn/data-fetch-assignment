@@ -1,14 +1,13 @@
 "use strict";
 window.addEventListener("load", main);
 
-/* ========== Database URL ========== */
-const DATA_URL = "https://cederdorff.github.io/dat-js/05-data/southpark.json";
-
 /* =========== Global consts and main func =========== */
 const characterContainer = document.querySelector("#characters");
 const dialogContainer = document.querySelector("#dialog-grid");
 async function main() {
-    const characters = await fetchData(DATA_URL);
+    /* ========== Database URL ========== */
+    const dataURL = "https://cederdorff.github.io/dat-js/05-data/southpark.json";
+    const characters = await fetchData(dataURL);
     showAllCharacters(characters);
 }
 /* =========== Fetch character data =========== */
@@ -27,10 +26,10 @@ async function fetchData(url) {
 }
 /* ========== Object validation ========== */
 function validateObject(obj) {
-    const CORRECT_KEYS = ["name", "nickname", "image", "occupation", "age", "voicedby", "gender", "religion", "catchphrase", "haircolor", "schoolgrade", "episodes", "appearances", "firstappearance"];
+    const correctKeys = ["name", "nickname", "image", "occupation", "age", "voicedby", "gender", "religion", "catchphrase", "haircolor", "schoolgrade", "episodes", "appearances", "firstappearance"];
     validateImage(obj);
     for (const key in obj) {
-        if (!CORRECT_KEYS.includes(key.toLowerCase())){
+        if (!correctKeys.includes(key.toLowerCase())){
             return false;
         }
     }
@@ -50,8 +49,8 @@ function validateImage(obj) {
     }
 }
 function isUndefined(value) {
-    const UNDEFINED_VALUES = ["unknown", "undefined", "n/a", "none", "", "nothing", "-", "no data", "null"];
-    return UNDEFINED_VALUES.includes(String(value).toLowerCase());
+    const undefinedValues = ["unknown", "undefined", "n/a", "none", "", "nothing", "-", "no data", "null"];
+    return undefinedValues.includes(String(value).toLowerCase());
 }
 /* =========== Display character data =========== */
 function showAllCharacters(data) {
