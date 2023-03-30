@@ -45,7 +45,7 @@ function validateImage(obj) {
     {
         obj.image = obj.image.replace(regex, '$1');
     }
-    if (!/^https?/.test(obj.image) || /imgur/.test(obj.image)) {
+    if (!/^https?/.test(obj.image)) {
         obj.image = "data/images/placeholder.png";
     }
 }
