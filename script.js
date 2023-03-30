@@ -5,13 +5,15 @@ window.addEventListener("load", main);
 const characterContainer = document.querySelector("#characters");
 const dialogContainer = document.querySelector("#dialog-grid");
 async function main() {
-    /* ========== Database URL ========== */
+    /* ===== Database URL ===== */
     const dataURL = "https://cederdorff.github.io/dat-js/05-data/southpark.json";
-    const characters = await fetchData(dataURL);
+    const characters = await fetchCharacterData(dataURL);
+    /* ===== sorting by amount of appearances =====*/
+    characters.sort((charA, charB) => charB.appearances - charA.appearances);
     showAllCharacters(characters);
 }
 /* =========== Fetch character data =========== */
-async function fetchData(url) {
+async function fetchCharacterData(url) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
