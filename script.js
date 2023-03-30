@@ -36,14 +36,14 @@ function validateObject(obj) {
     return true;
 }
 function validateImage(obj) {
-    /* ===== regex to match urls with file extensions ===== */
+    /* ===== regex to match urls with valid file extensions ===== */
     const regEx = /^(.+?\.(png|jpe?g|gif)).*$/i;
     if (obj.image.indexOf(".png") === obj.image.lastIndexOf(".png") &&
         obj.image.indexOf(".jpg") === obj.image.lastIndexOf(".jpg") &&
         obj.image.indexOf(".jpeg") === obj.image.lastIndexOf(".jpeg") &&
         obj.image.indexOf(".gif") === obj.image.lastIndexOf(".gif"))
     {
-        /* === replaces with the captured part "(.+?\.(png|jpe?g|gif))" === */
+        /* === replaces with the captured part $1: "(.+?\.(png|jpe?g|gif))" === */
         obj.image = obj.image.replace(regEx, '$1');
     }
     /* ===== if url doesnt start with http/https ===== */
