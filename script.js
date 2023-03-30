@@ -100,7 +100,7 @@ async function showDialog(character) {
 
     /* ===== reset hidden elements on dialog close ===== */
     dialog.querySelector("#cancel-btn").addEventListener("click", resetInfoDisplayMode);
-    dialog.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", (event) => {
         if (event.key === "Escape") {
             resetInfoDisplayMode();
         }
